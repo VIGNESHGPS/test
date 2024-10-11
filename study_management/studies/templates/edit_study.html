@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Study</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'studies/form.css' %}"></head>
+</head>
+<body>
+    
+    <form method="post" >
+        <h1>Edit Study</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+        <a href="{% url 'study_list' %}"><button>Cancel</button></a> 
+        </form>
+    
+</body>
+</html>

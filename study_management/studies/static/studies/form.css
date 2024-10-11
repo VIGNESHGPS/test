@@ -1,0 +1,115 @@
+.formcon {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #f4f4f4e2;   
+    margin: 3% auto auto auto ; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.valuetd{
+    padding:1%;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 40%;
+}
+.actionbtn{
+  
+    margin: 0 30%;
+    display: flex !important;
+    justify-content: space-between;
+}
+.actionbtns{
+  
+  
+    display: flex !important;
+    justify-content: space-between;
+}
+
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 5% ;        
+}
+.button {
+    display: inline-block;
+    margin: 5% 20% auto;
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #d32f2f;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #215c06;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+input[type="hidden"] {
+    display: none;
+}

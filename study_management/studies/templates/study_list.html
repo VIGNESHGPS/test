@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Management</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'studies/styles.css' %}">
+</head>
+<body>
+    <h1>Study Management</h1>
+    <form method="post" action="{% url 'delete_multiple_studies' %}" class="stu">
+        {% csrf_token %}
+        <table border=1>
+            <tr>
+                <th><input type="checkbox" id="select-all"></th>
+                <th>Study Name</th>
+                <th>Study Phase</th>
+                <th>Sponsor Name</th>
+                <th>Study Description</th>
+                <th>View</th>
+                <th>edit</th>
+
+            </tr>
+            {% for study in studies %}
+            <tr>
+                <td><input type="checkbox" class="study-checkbox" name="study_ids" value="{{ study.id }}"></td>
+                <td>{{ study.study_name }}</td>
+                <td>{{ study.study_phase }}</td>
+                <td>{{ study.sponsor_name }}</td>
+                <td>{{ study.study_description }}</td>
+                <td>
+                    <a href="{% url 'view_study' study.pk %}">View</a></td>
+                  <td> <a href="{% url 'edit_study' study.pk %}">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table><div class="actionbtn">
+        <button class="actionbtns" type="submit">Delete Selected</button>
+        <button class="actionbtns"><a class="actionref" href="{% url 'add_study' %}">Add Study</a></button>
+        </div>
+    </form>
+    
+    <script>
+        // JavaScript to handle the "Select All" functionality
+        document.getElementById('select-all').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.study-checkbox');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        });
+    </script>
+    
+</body>
+</html>

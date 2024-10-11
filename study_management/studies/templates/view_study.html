@@ -1,0 +1,23 @@
+<!-- templates/studies/view_study.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Study Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'studies/form.css' %}">
+</head>
+<body>
+    
+    <form >
+        <h1>Study Details</h1>
+        <div style="text-align: center;">
+        <table style="display:flex;justify-content: space-evenly;text-align:left;" >
+      <tr> <td> <strong>Study Name:</strong></td><td class="valuetd">  {{ study.study_name }}</td></tr>
+      <tr> <td> <strong>Study Description:</strong></td><td class="valuetd">  {{ study.study_description }}</td></tr>
+        <tr> <td> <strong>Study Phase:</strong> </td><td class="valuetd">  {{ study.study_phase }}</td></tr>
+            <tr> <td><strong>Sponsor Name:</strong></td><td class="valuetd">  {{ study.sponsor_name }}</td></tr>
+    </table>
+    <a href="{% url 'study_list' %}" class="button">Cancel</a></div>
+</form>
+</body>
+</html>

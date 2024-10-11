@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Study</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'studies/form.css' %}"></head>
+<body>
+    <h1>Add Study</h1>
+    <div class="formcon">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="actionbtns">
+            <button style="margin-left:5%;" type="submit">Save</button>
+            <a style="width:30%;" href="{% url 'study_list' %}" class="button">Cancel</a>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>
